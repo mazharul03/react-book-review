@@ -16,7 +16,7 @@ const Books = () => {
                 <h2 className="text-4xl font-bold">Books : {books.length}</h2>
                 <div>
                     {
-                        books.map(book=> <Book key={job.div} job={job}></Book>)
+                        books.map(book=> <Book key={book.id} book={book}></Book>)
                     }
                 </div>
             </div>
