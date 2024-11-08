@@ -1,7 +1,7 @@
 
 const Book = ({ book }) => {
 
-    const { bookName, image } = book;
+    const { bookName, author, image,review, totalPages, rating, category, tags, publisher} = book;
 
     return (
         <div className=" border-2 rounded-lg h-80 w-72">
