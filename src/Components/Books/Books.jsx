@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Book from "../Book/Book";
 const Books = () => {
 
     const [books, setBooks]= useState([]);
@@ -13,6 +14,11 @@ const Books = () => {
         <div>
             <div className="text-center">
                 <h2 className="text-4xl font-bold">Books : {books.length}</h2>
+                <div>
+                    {
+                        books.map(book=> <Book key={job.div} job={job}></Book>)
+                    }
+                </div>
             </div>
         </div>
     );
