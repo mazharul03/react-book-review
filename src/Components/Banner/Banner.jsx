@@ -2,7 +2,7 @@
 const Banner = () => {
 
     return (
-        <div className="bg-gray-200 p-5 rounded-2xl my-10 w-11/12 mx-auto">
+        <div className="bg-gray-200 p-6 rounded-2xl my-10 w-10/12 mx-auto">
             <div className="w-10/12 mx-auto my-12 flex justify-between">
                 <div>
                     <h2 className="text-5xl mt-20 space-y-2 font-bold">Books to freshen up 
