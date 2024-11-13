@@ -5,7 +5,7 @@ const Book = ({ book }) => {
     const { bookId, bookName, author, image, review, totalPages, rating, category, tags, publisher } = book;
 
     return (
-        <Link to={`/booksDetails/${bookId}`} >
+        <Link to={`/bookDetails/${bookId}`} >
             <div className="border rounded-2xl mx-auto h-[420px] w-[330px]">
                 <img className="h-52 w-72 mt-5 bg-zinc-100 py-6 px-6 rounded-xl mx-auto " src={image} alt="Shoes" />
                 <div className="flex mx-5 my-4 gap-3">
