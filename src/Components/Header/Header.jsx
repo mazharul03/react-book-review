@@ -40,8 +40,8 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-2">
-                <a className="bg-green-500 text-white py-1 px-3 rounded-md">Button</a>
-                <a className="bg-sky-300 py-1 px-3 rounded-md text-white">Button</a>
+                <button className="bg-green-500 text-white py-1 px-3 rounded-md">Sign In</button>
+                <button className="bg-cyan-500 py-1 px-3 rounded-md text-white">Sign Up</button>
             </div>
         </div>
     );
