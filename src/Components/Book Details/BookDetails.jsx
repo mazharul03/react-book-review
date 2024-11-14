@@ -20,8 +20,8 @@ const BookDetails = () => {
                     <p><span className="font-bold">Review :</span> {book.review}</p>
                     <div className="flex gap-5">
                         <p className="font-bold">Tag</p>
-                        <p className="bg-green-50 px-3 rounded-lg py-1 font-semibold text-green-600">#{book.tags[0]}</p>
-                        <p className="bg-green-50 px-3 rounded-lg py-1 font-semibold text-green-600">#{book.tags[1]}</p>
+                        <p className="bg-green-50 px-3 rounded-3xl py-2 font-semibold text-green-600">#{book.tags[0]}</p>
+                        <p className="bg-green-50 px-3 rounded-3xl py-2 font-semibold text-green-600">#{book.tags[1]}</p>
                     </div>
                     <div className="border-b-2 w-full border-solid border-gray-200"></div>
                     <div className="flex gap-12">
