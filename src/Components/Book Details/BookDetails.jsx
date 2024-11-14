@@ -39,9 +39,13 @@ const BookDetails = () => {
 
                         </div>
                     </div>
-                    <div>
-                        <button>Read</button>
-                        <button>Wishlist</button>
+                    <div className="flex gap-4">
+                        <button className=" text-gray-700 font-semibold py-2 px-4 rounded-lg border border-gray-400 hover:bg-gray-300 transition duration-200">
+                            Read
+                        </button>
+                        <button className="bg-cyan-600 text-white font-semibold py-2 px-4 rounded-lg border border-blue-700 hover:bg-blue-600 transition duration-200">
+                            Wishlist
+                        </button>
                     </div>
                 </div>
             </div>
