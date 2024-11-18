@@ -6,35 +6,40 @@ import ReadList from "../Read List/ReadList";
 
 const ListedBooks = () => {
 
-    const  books = useLoaderData();
+    const books = useLoaderData();
 
     const [listedBooks, setListedBooks] = useState([]);
 
-    useEffect(() =>{
+    useEffect(() => {
         const storedBookIds = getStoredReadBooks();
-        if(books.length > 0){
+        if (books.length > 0) {
             const booksListed = [];
 
             console.log(books, storedBookIds, booksListed)
 
-            for (const id of storedBookIds){
+            for (const id of storedBookIds) {
                 const book = books.find(book => book.bookId === id);
-                if (book){
+                if (book) {
                     booksListed.push(book);
                 }
             }
             setListedBooks(booksListed);
         }
-    },[])
+    }, [])
 
     return (
         <div>
-            {listedBooks.map((book) => (
-                <ReadList key={book.id} book={book} />
-            ))}
+            <div>
+                <h2> hello world</h2>
+                <div>
+                    {listedBooks.map(book => <ReadList key={book.id} book={book} />)}
+                </div>
+
+            </div>
+
         </div>
     );
-    
+
 };
 
 export default ListedBooks;
