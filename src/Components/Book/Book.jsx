@@ -14,7 +14,7 @@ const Book = ({ book }) => {
                 </div>
                 <p className="text-2xl font-semibold ml-4">{bookName}</p>
                 <p className="ml-4 text-sm mt-1"> By : {author}</p>
-                <div class="border-t-2 border-dashed border-gray-200 w-11/12 mx-auto mt-3"></div>
+                <div className="border-t-2 border-dashed border-gray-200 w-11/12 mx-auto mt-3"></div>
                 <div className="ml-4 mt-2 mr-4 flex justify-between">
                     <p>{category}</p>
                     <div className="flex">

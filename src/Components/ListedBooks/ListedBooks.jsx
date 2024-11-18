@@ -14,8 +14,11 @@ const ListedBooks = () => {
         const storedBookIds = getStoredReadBooks();
         if(books.length > 0){
             const booksListed = [];
+
+            console.log(books, storedBookIds, booksListed)
+
             for (const id of storedBookIds){
-                const book = books.find(book => book.id === id);
+                const book = books.find(book => book.bookId === id);
                 if (book){
                     booksListed.push(book);
                 }
@@ -26,14 +29,12 @@ const ListedBooks = () => {
 
     return (
         <div>
-            <ReadList></ReadList>
-            <div>
-                {
-                    listedBooks.map(book => <ReadList key={book.id} book={book}></ReadList>)
-                }
-            </div>
+            {listedBooks.map((book) => (
+                <ReadList key={book.id} book={book} />
+            ))}
         </div>
     );
+    
 };
 
 export default ListedBooks;

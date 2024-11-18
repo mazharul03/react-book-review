@@ -1,6 +1,8 @@
 
 const ReadList = ({book}) => {
 
+    console.log(book);
+ 
     const {bookName} = book;
 
     return (
