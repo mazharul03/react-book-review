@@ -32,7 +32,7 @@ const ListedBooks = () => {
     return (
         <div>
             <div className="w-10/12 mx-auto">
-                <h2>Hello World</h2>
+                <h2 className="font-bold text-3xl text-center bg-gray-100 py-7 my-6 rounded-xl">Books</h2>
                 <div>
                     {listedBooks.length > 0 ? (
                         listedBooks.map(book => <ReadList key={book.bookId} book={book} />)

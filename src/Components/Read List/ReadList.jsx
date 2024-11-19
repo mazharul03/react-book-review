@@ -1,12 +1,12 @@
 
-const ReadList = ({book}) => {
- 
+const ReadList = ({ book }) => {
+
     const { image, bookName, author, tags, yearOfPublishing, publisher, totalPages, category, rating } = book;
 
     return (
-        <div>
+        <div className="border-2 rounded-xl flex my-8">
             <div>
-        <img src={image} alt="" />
+                <img className="w-60 h-64 p-10 rounded-xl bg-gray-200 m-8" src={image} alt="" />
             </div>
             <div>
 
