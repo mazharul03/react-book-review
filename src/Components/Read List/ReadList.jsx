@@ -1,4 +1,6 @@
 import { GrLocation } from "react-icons/gr";
+import { GoPeople } from "react-icons/go";
+import { BsFillFileEarmarkBarGraphFill } from "react-icons/bs";
 
 const ReadList = ({ book }) => {
 
@@ -21,8 +23,18 @@ const ReadList = ({ book }) => {
                         <p> Year of Publishing : {yearOfPublishing}</p>
                     </div>
                 </div>
+                <div className="text-gray-500 flex gap-4">
+                    <div className="flex items-center gap-2">
+                        <p className="text-xl"> <GoPeople /> </p>
+                        <p>  Publisher : {publisher}</p>
+                    </div>
+                    <div className="flex gap-2">
+                        <p className="text-xl"><BsFillFileEarmarkBarGraphFill /></p>
+                        <p> Page {totalPages}</p>
 
+                    </div>
 
+                </div>
 
             </div>
         </div>
