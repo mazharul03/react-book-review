@@ -16,8 +16,8 @@ const ReadList = ({ book }) => {
                 <h1> By : {author}</h1>
                 <div className="flex items-center gap-5">
                     <p className="font-bold text-xl">Tag</p>
-                    <p className="bg-green-50 px-3 rounded-3xl py-2 font-semibold text-green-600">#{book.tags[0]}</p>
-                    <p className="bg-green-50 px-3 rounded-3xl py-2 font-semibold text-green-600">#{book.tags[1]}</p>
+                    <p className="bg-green-50 px-3 rounded-3xl py-2 font-semibold text-green-600">#{tags[0]}</p>
+                    <p className="bg-green-50 px-3 rounded-3xl py-2 font-semibold text-green-600">#{tags[1]}</p>
                     <div className="flex items-center gap-2">
                         <p className="text-xl"><GrLocation /></p>
                         <p> Year of Publishing : {yearOfPublishing}</p>
@@ -34,6 +34,14 @@ const ReadList = ({ book }) => {
 
                     </div>
 
+                </div>
+                
+                <hr className="border"/>
+                
+                <div className="flex gap-5">
+                    <p className="text-blue-700 bg-blue-100 py-1 px-3 rounded-full"> Category : {category}</p>
+                    <p className=" text-orange-400 bg-orange-50 py-1 px-3 rounded-full"> Rating : {rating }</p>
+                    <button className="text-white bg-green-500 py-1 px-3 rounded-full"> View Details </button>
                 </div>
 
             </div>
