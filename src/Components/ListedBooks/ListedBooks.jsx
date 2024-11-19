@@ -31,7 +31,7 @@ const ListedBooks = () => {
 
     return (
         <div>
-            <div>
+            <div className="w-10/12 mx-auto">
                 <h2>Hello World</h2>
                 <div>
                     {listedBooks.length > 0 ? (
