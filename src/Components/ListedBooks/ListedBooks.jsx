@@ -10,12 +10,14 @@ const ListedBooks = () => {
 
     const [listedBooks, setListedBooks] = useState([]);
 
+    console.log('check', listedBooks);
+
     useEffect(() => {
         const storedBookIds = getStoredReadBooks();
         if (books.length > 0) {
             const booksListed = [];
 
-            console.log(books, storedBookIds, booksListed)
+            console.log(storedBookIds)
 
             for (const id of storedBookIds) {
                 const book = books.find(book => book.bookId === id);
@@ -25,20 +27,23 @@ const ListedBooks = () => {
             }
             setListedBooks(booksListed);
         }
-    }, [])
+    }, [books])
 
     return (
         <div>
             <div>
-                <h2> hello world</h2>
+                <h2>Hello World</h2>
                 <div>
-                    {listedBooks.map(book => <ReadList key={book.id} book={book} />)}
+                    {listedBooks.length > 0 ? (
+                        listedBooks.map(book => <ReadList key={book.bookId} book={book} />)
+                    ) : (
+                        <p>No books have been marked as read yet.</p>
+                    )}
                 </div>
-
             </div>
-
         </div>
     );
+    
 
 };
 
