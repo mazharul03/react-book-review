@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, Outlet, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { getStoredReadBooks } from "../../utility/localstorage";
 import ReadList from "../Read List/ReadList";
 import WishList from "../Wishlist/WishList";
