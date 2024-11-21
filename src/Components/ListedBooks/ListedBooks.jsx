@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, Outlet, useLoaderData } from "react-router-dom";
 import { getStoredReadBooks } from "../../utility/localstorage";
 import ReadList from "../Read List/ReadList";
 import WishList from "../Wishlist/WishList";
@@ -34,8 +34,8 @@ const ListedBooks = () => {
         <div>
             <div className="w-10/12 mx-auto">
                 <h2 className="font-bold text-3xl text-center bg-gray-100 py-7 my-6 rounded-xl">Books</h2>
-                <button> Read Books</button>
-                <button> Wishlist Books</button>
+                <Link to=''><button> Read Books</button></Link>
+                <Link to={`wishList`}><button> Wishlist Books</button></Link>
                 <div>
                     {listedBooks.length > 0 ? (
                         listedBooks.map(book => <ReadList key={book.bookId} book={book} />)
