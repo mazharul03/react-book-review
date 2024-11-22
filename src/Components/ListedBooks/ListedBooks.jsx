@@ -37,10 +37,10 @@ const ListedBooks = ({readList, wishList}) => {
             <div className="w-10/12 mx-auto">
                 <h2 className="font-bold text-3xl text-center bg-gray-100 py-7 my-6 rounded-xl">Books</h2>
                 <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden flex-nowrap  dark:text-gray-800">
-                    <Link to='' className="flex items-center flex-shrink-0 px-5 py-3 space-x-2 border-b dark:border-gray-600 dark:text-gray-600">
+                    <Link to='' onClick={()=>setTabIndex(0)} className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${tabIndex === 0 ? 'border border-b-0' : 'border-b'} rounded-t-lg dark:border-gray-600 dark:text-gray-900`}>
                         <span> Read Books</span>
                     </Link>
-                    <Link to={'wishList'} className="flex items-center flex-shrink-0 px-5 py-3 space-x-2 border border-b-0 rounded-t-lg dark:border-gray-600 dark:text-gray-900">
+                    <Link to={`wishList`} onClick={()=>setTabIndex(1)} className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${tabIndex === 1 ? 'border border-b-0' : 'border-b'} rounded-t-lg dark:border-gray-600 dark:text-gray-900`}>
                         <span> Wishlist Books</span>
                     </Link>
                 </div>
