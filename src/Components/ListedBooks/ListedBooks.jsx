@@ -6,6 +6,7 @@ import WishList from "../Wishlist/WishList";
 
 const ListedBooks = () => {
   const [tabIndex, setTabIndex] = useState(0); // 0: Read Books, 1: Wishlist
+  const [sortOption, setSortOption] = useState(""); // Sort by field
   const books = useLoaderData();
 
   const [readBooks, setReadBooks] = useState([]);
@@ -28,6 +29,21 @@ const ListedBooks = () => {
       setWishListBooks(filteredWishListBooks);
     }
   }, [books]);
+
+  // Sorting function
+  const sortBooks = (books, sortField) => {
+    if (!sortField) return books; // Return unsorted if no sort option selected
+    return [...books].sort((a, b) => (b[sortField] > a[sortField] ? 1 : -1)); // Descending order
+  };
+
+  // Handle Sort Change
+  const handleSortChange = (e) => {
+    setSortOption(e.target.value);
+  };
+
+  // Get the books to display
+  const displayedBooks =
+    tabIndex === 0 ? sortBooks(readBooks, sortOption) : sortBooks(wishListBooks, sortOption);
 
   return (
     <div>
@@ -57,18 +73,41 @@ const ListedBooks = () => {
           </Link>
         </div>
 
+        {/* Sort By Dropdown */}
+        <div className="my-4 text-center">
+          <label htmlFor="sortBy" className="mr-2 font-semibold">
+            Sort By:
+          </label>
+          <select
+            id="sortBy"
+            className="border px-3 py-2 rounded-lg"
+            value={sortOption}
+            onChange={handleSortChange}
+          >
+            <option value="">Select</option>
+            <option value="title">Title</option>
+            <option value="author">Author</option>
+            <option value="rating">Rating</option>
+            <option value="publicationYear">Publication Year</option>
+          </select>
+        </div>
+
         {/* Conditional Rendering Based on Tab */}
         <div>
-          {tabIndex === 0 ? (
-            readBooks.length > 0 ? (
-              readBooks.map((book) => <ReadList key={book.bookId} book={book} />)
-            ) : (
-              <p>No books have been marked as read yet.</p>
+          {displayedBooks.length > 0 ? (
+            displayedBooks.map((book) =>
+              tabIndex === 0 ? (
+                <ReadList key={book.bookId} book={book} />
+              ) : (
+                <WishList key={book.bookId} book={book} />
+              )
             )
-          ) : wishListBooks.length > 0 ? (
-            wishListBooks.map((book) => <WishList key={book.bookId} book={book} />)
           ) : (
-            <p>No books are in your wishlist yet.</p>
+            <p>
+              {tabIndex === 0
+                ? "No books have been marked as read yet."
+                : "No books are in your wishlist yet."}
+            </p>
           )}
         </div>
       </div>
@@ -77,3 +116,4 @@ const ListedBooks = () => {
 };
 
 export default ListedBooks;
+
