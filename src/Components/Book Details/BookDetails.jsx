@@ -12,7 +12,7 @@ const BookDetails = () => {
 
     const handleReadBooks=() =>{
         saveReadBooks(bookId);
-        toast('You have read already');
+        toast('You have read sucsesfully');
     }
 
     const handleWishList = () => {
