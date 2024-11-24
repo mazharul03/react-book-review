@@ -35,7 +35,7 @@ const ListedBooks = () => {
         <h2 className="font-bold text-3xl text-center bg-gray-100 py-7 my-6 rounded-xl">
           Books
         </h2>
-        <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden flex-nowrap dark:text-gray-800">
+        <div className="flex items-center overflow-x-auto overflow-y-hidden flex-nowrap dark:text-gray-800">
           {/* Toggle Tabs */}
           <Link
             to=""
