@@ -11,7 +11,7 @@ const About = () => {
         Created by <span className="font-bold text-green-500">[Your Name]</span>, this project was built with React and
         React Router for a smooth user experience.
       </p>
-      <div className="mt-8 bg-green-400 text-slate-700 p-6 rounded-lg">
+      <div className="mt-8 bg-green-400 text-slate-600 p-6 rounded-lg">
         <h2 className="text-2xl font-semibold mb-4">Technologies Used:</h2>
         <ul className="list-disc pl-6">
           <li>React</li>

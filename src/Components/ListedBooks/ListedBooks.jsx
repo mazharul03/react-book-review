@@ -80,7 +80,7 @@ const ListedBooks = () => {
           </label> */}
           <select
             id="sortBy"
-            className="border-none bg-green-500 text-white px-3 py-2 w-32 rounded-lg"
+            className="bg-green-500 text-white px-3 py-2 w-32 rounded-lg"
             value={sortOption}
             onChange={handleSortChange}
           >

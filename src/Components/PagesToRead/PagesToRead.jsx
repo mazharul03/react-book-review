@@ -39,10 +39,6 @@ const PagesToRead = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-6 bg-gray-50 rounded-lg shadow-lg">
-      <h1 className="text-3xl font-semibold text-center text-blue-600 mb-6">Pages to Read</h1>
-      <p className="text-lg text-gray-700 text-center mb-8">
-        Visualize the total pages for each book in your read list.
-      </p>
       <ResponsiveContainer width="100%" height={400}>
         <BarChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" />
