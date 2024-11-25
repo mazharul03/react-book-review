@@ -1,7 +1,7 @@
 
 const About = () => {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12 bg-gray-100 rounded-lg shadow-lg">
+    <div className="max-w-4xl mx-auto my-10 px-6 py-12 bg-gray-100 rounded-lg shadow-lg">
       <h1 className="text-4xl font-semibold text-center text-cyan-500 mb-6">About This Website</h1>
       <p className="text-lg text-gray-700 mb-4">
         This website is a book catalog and reading tracker. Users can browse a list of books, see details for each book,
