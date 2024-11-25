@@ -74,17 +74,17 @@ const ListedBooks = () => {
         </div>
 
         {/* Sort By Dropdown */}
-        <div className="my-4 text-center">
-          <label htmlFor="sortBy" className="mr-2 font-semibold">
+        <div className="text-center w-56 mx-auto">
+          {/* <label htmlFor="sortBy" className="mr-2 text-white font-semibold">
             Sort By:
-          </label>
+          </label> */}
           <select
             id="sortBy"
-            className="border px-3 py-2 rounded-lg"
+            className="border-none bg-green-500 text-white px-3 py-2 w-32 rounded-lg"
             value={sortOption}
             onChange={handleSortChange}
           >
-            <option value="">Select</option>
+            <option value=""> Sort By</option>
             <option value="title">Title</option>
             <option value="author">Author</option>
             <option value="rating">Rating</option>
